@@ -63,6 +63,8 @@ Build the docker image:
 Run the docker image:
 `docker run -d -p 5000:5000`
 
+The result should be an API service accessible from 'localhost:5000' or '127.0.0.1:5000' of which GET and POST requests can be sent.
+
 ### Examples
 The API contains a GET endpoint of health, which responds to the '/health' endpoint with the status of the service.
 

@@ -29,7 +29,9 @@ def health_endpoint() -> Response:
 
 @app.route('/math', methods=['POST'])
 def math_endpoint() -> Response:
-    """ Return a given integer multiplied by 1337"""
+    """ Return a given integer multiplied by 1337 in JSON
+        NOTE: The value is capped to the value defined in MATH_MAX_VALUE
+    """
 
     endpoint_request = request.json
 

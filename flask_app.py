@@ -48,6 +48,8 @@ def math_endpoint() -> Response:
     if response_value > MATH_MAX_VALUE:
         # Cap value to maximum determined by business logic
         response_value = MATH_MAX_VALUE
+        return jsonify(status=REQUEST_ERROR_STATUS, msg="Input payload value resulted in math result exceeding maximum value: [" + MATH_MAX_VALUE + "].",
+                       value=response_value), REQUEST_ERROR_STATUS
 
     return jsonify(status=OK_STATUS, value=response_value), OK_STATUS
 

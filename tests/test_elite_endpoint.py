@@ -45,6 +45,7 @@ def test_post_response_is_max_value():
         MATH_ENDPOINT, data=json.dumps(request_data), headers=HEADERS)
 
     assert response.get_json()['value'] == 10_000_000
+    assert response.status_code == 400
 
 
 def test_invalid_request_json():

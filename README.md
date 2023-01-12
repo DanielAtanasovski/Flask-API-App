@@ -18,6 +18,7 @@ Using Python Flask create two simple endpoints as described below
     1.	Test proving posted value not an integer will return a 400 response i.e. double, float or alpha
     2.	Test proving returned number generated is not greater than 10,000,000 returning a 400 response
     3.	Test invalid JSON posted in returns a 400
+
 ##### Fit and Finish
 Once the application has been written, continue with the following additions:
 1.	Provide a means of packaging your application as a Dockerfile build
